@@ -1,0 +1,29 @@
+name: "SSL Certificate Manager"
+description: "Implementation of ACME.sh using Let's Encrypt with easyDNS API"
+version: "3.0.7"
+url: "https://github.com/mvandal/acme.sh"
+slug: "acme_sh"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map:
+  - ssl:rw
+  - addon_config:rw
+startup: once
+boot: manual
+options:
+  email_address: null
+  easydns_token: null
+  easydns_key: null
+  fqdn: null
+  command: daemon
+schema:
+  email_address: str
+  easydns_token: str
+  easydns_key: str
+  fqdn: str
+  command: str?

@@ -1,0 +1,16 @@
+configuration:
+  email_address:
+    name: "Email Address"
+    description: "To be used for CA registration"
+  easydns_token:
+    name: "easyDNS Token"
+    description: "easyDNS API Token"
+  easydns_key:
+    name: "easyDNS Key"
+    description: "easyDNS API Key"
+  fqdn:
+    name: "Domain name"
+    description: "FQDN for which to get a certificate"
+  command:
+    name: "ACME.sh Command"
+    description: "Optional - Supported commands: {daemon, issue, register}"

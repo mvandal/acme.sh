@@ -6,11 +6,34 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXFileReference section */
+		278107092B9BBB6F005BEB0B /* Dockerfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dockerfile; sourceTree = "<group>"; };
+		2781070A2B9BBBEB005BEB0B /* config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = config.yaml; sourceTree = "<group>"; };
+		2781070C2B9BBBF3005BEB0B /* en.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = en.yaml; sourceTree = "<group>"; };
+		2781070F2B9BBCDB005BEB0B /* run.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
+		278107102B9BBD40005BEB0B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		278107112B9BBD40005BEB0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		278107022B9BBB20005BEB0B = {
 			isa = PBXGroup;
 			children = (
+				278107102B9BBD40005BEB0B /* CHANGELOG.md */,
+				278107112B9BBD40005BEB0B /* README.md */,
+				278107092B9BBB6F005BEB0B /* Dockerfile */,
+				2781070A2B9BBBEB005BEB0B /* config.yaml */,
+				2781070F2B9BBCDB005BEB0B /* run.sh */,
+				2781070E2B9BBC8C005BEB0B /* translations */,
 			);
+			sourceTree = "<group>";
+		};
+		2781070E2B9BBC8C005BEB0B /* translations */ = {
+			isa = PBXGroup;
+			children = (
+				2781070C2B9BBBF3005BEB0B /* en.yaml */,
+			);
+			path = translations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
