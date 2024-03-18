@@ -3,27 +3,17 @@ FROM $BUILD_FROM
 
 # Define constants
 ARG VERSION=3.0.7
+ARG CA=letsencrypt
 ENV LE_CONFIG_HOME /config
 ENV AUTO_UPGRADE 0
 
 # Install dependencies
-RUN apk --no-cache add \
-  openssl \
-  openssh-client \
-  coreutils \
-  bind-tools \
-  curl \
-  sed \
-  socat \
-  tzdata \
-  oath-toolkit-oathtool \
-  jq \
-  cronie
+RUN apk --no-cache add openssl
 
 # Install & initialize ACME.sh
 RUN curl -L https://github.com/acmesh-official/acme.sh/archive/refs/tags/${VERSION}.tar.gz | tar -xz
 RUN cd acme.sh-${VERSION} && ./acme.sh --install --no-cron
-RUN ln -s /root/.acme.sh/acme.sh /usr/local/bin/acme.sh
+RUN /root/.acme.sh/acme.sh --server ${CA} --set-default-ca
 RUN cd / && rm -rf acme.sh-${VERSION}
 
 # Configure image entry point

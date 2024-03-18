@@ -20,10 +20,8 @@ options:
   easydns_token: null
   easydns_key: null
   fqdn: null
-  command: daemon
 schema:
   email_address: str
-  easydns_token: str
-  easydns_key: str
+  easydns_token: password
+  easydns_key: password
   fqdn: str
-  command: str?

@@ -1,11 +1,11 @@
 # Home Assistant Add-on
-## SSL certificate Manager  
+### SSL Certificate Manager  
 
 Uses the [ACME.sh](https://github.com/acmesh-official/acme.sh) shell script to automate certificate issue.
 
 Configured for [Let's Encrypt](https://letsencrypt.org) CA using [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge) for [easyDNS API](https://sandbox.rest.easydns.net:3001)
 
-## Configuration command
+### Configuration command
 - register: for initial account registration with CA
 - issue: for certificate renewal
 - daemon: starts the container as a daemon for debugging
