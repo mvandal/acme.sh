@@ -3,6 +3,7 @@
 # Define constants
 EXEC="/root/.acme.sh/acme.sh"
 API="--dns dns_easydns"
+CA="letsencrypt"
 ENV_FILE="/config/email.env"
 KEYFILE="/ssl/privkey.pem"
 CERTFILE="/ssl/fullchain.pem"
@@ -23,7 +24,7 @@ if [ -f ${ENV_FILE} ]; then
   fi
 else
   echo "Registering account with CA..."
-  ${EXEC} --register-account --email ${EMAIL}
+  ${EXEC} --server ${CA} --set-default-ca --register-account --email ${EMAIL}
   echo "export REGISTERED_EMAIL=${EMAIL}">${ENV_FILE}
 fi
 
