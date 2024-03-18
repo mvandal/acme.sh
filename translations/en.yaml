@@ -11,6 +11,3 @@ configuration:
   fqdn:
     name: "Domain name"
     description: "FQDN for which to get a certificate"
-  command:
-    name: "ACME.sh Command"
-    description: "Optional - Supported commands: {daemon, issue, register}"
